@@ -11,10 +11,12 @@ _Esempio di richiesta GET tramite REST:_
 In questo caso, il client cerca di connetterersi al server “massolit.ns0.it” sulla porta “8181”, e chiede alla servlet “devices” la lista di devices collegati. Tutto questo procedimento viene gestito da una libreria java (RETROFIT) che permette di mandare delle request di tipo GET, POST, et ad un Web Service, usando le annotazioni di java. 
 _Esempio di richiesta tramite retrofit:_
 
-```@GET(/devices?action=get)  
+```
+@GET(/devices?action=get)  
    public void getAllDevicesByUser(  
          @Query("email") String email,  
-         Callback<List<DeviceInterface>> devices);```  
+         Callback<List<DeviceInterface>> devices);
+```  
   
 La risposta del server è una stringa JSON del tipo:
 `{[email:”email”,name:”Macbook”,model:”Air”],[email:”email”,name:”HTC”,model:”One S”]}`
